@@ -1,6 +1,17 @@
-<?php
-    $minhaVar = 'Luan';
-?>
-<h1>Minha view do controller pessoa do módulo pessoa</h1>
-
-<p><?=$minhaVar?></p>
+<h1>Lista de Pessoas</h1>
+<table class="table table-striped">
+    <tr>
+        <th>Código</th>
+        <th>Nome</th>
+    </tr>
+    <?php foreach ($pessoas as $pes): ?>
+        <tr>
+            <td>
+                <?=$pes->getId()?>
+            </td>
+            <td>
+                <?=$pes->getNome()?>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+</table>

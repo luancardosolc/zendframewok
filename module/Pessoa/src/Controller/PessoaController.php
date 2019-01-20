@@ -7,9 +7,16 @@ use Zend\View\Model\ViewModel;
 
 class PessoaController extends AbstractActionController
 {
+    private $table;
+
+    public function __construct($table)
+    {
+        $this->table = $table;
+    }
+
     public function indexAction()
     {
-        return new ViewModel();
+        return new ViewModel(['pessoas' => $this->table->getAll()]);
     }
 
     public function adicionarAction()

@@ -44,7 +44,7 @@ class Pessoa {
         return $this->sobrenome;
     }
 
-    public function setId($sobrenome)
+    public function setSobrenome($sobrenome)
     {
         $this->sobrenome = $sobrenome;
     }
